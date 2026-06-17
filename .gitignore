@@ -19,12 +19,15 @@ target/
 coverage/
 
 # ---- local db / data ----
+data/
 *.db
 *.sqlite
 *.sqlite3
 *.db-journal
 *.mv.db
 *.trace.db
+*.db-wal
+*.db-shm
 
 # ---- env & secrets ----
 .env
