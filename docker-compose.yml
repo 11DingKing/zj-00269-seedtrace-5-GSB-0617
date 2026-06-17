@@ -1,5 +1,6 @@
 services:
   app:
+    init: true
     build: .
     ports:
       - "${PORT:-3001}:3001"

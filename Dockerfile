@@ -19,4 +19,4 @@ ENV DB_PATH=/data/seedtrace.db
 ENV STATIC_DIR=/app/dist
 ENV NODE_ENV=production
 EXPOSE 3001
-CMD ["npx", "tsx", "api/index.ts"]
+CMD ["node", "--import", "tsx/esm", "api/index.ts"]
