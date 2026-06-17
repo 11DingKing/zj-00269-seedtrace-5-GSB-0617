@@ -19,10 +19,13 @@ target/
 coverage/
 
 # ---- local db / data ----
+data/
 *.db
+*.db-journal
+*.db-shm
+*.db-wal
 *.sqlite
 *.sqlite3
-*.db-journal
 *.mv.db
 *.trace.db
 
