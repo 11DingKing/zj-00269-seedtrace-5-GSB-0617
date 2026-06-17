@@ -74,10 +74,11 @@ export function createApp() {
 
 const app = createApp();
 
-if (
-  process.argv[1]?.endsWith("index.js") ||
-  process.argv[1]?.endsWith("index.ts")
-) {
+const isMainEntry = process.argv.some(
+  (arg) => arg.endsWith("/index.ts") || arg.endsWith("/index.js"),
+);
+
+if (isMainEntry) {
   const server = app.listen(PORT, () => {
     console.log(`服务启动于端口 ${PORT} (${NODE_ENV})`);
     if (NODE_ENV === "production") {

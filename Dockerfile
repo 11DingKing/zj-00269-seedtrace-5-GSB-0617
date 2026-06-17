@@ -25,4 +25,4 @@ EXPOSE 3001
 
 VOLUME ["/app/data"]
 
-CMD ["npm", "start"]
+CMD ["node", "./node_modules/tsx/dist/cli.mjs", "api/index.ts"]
