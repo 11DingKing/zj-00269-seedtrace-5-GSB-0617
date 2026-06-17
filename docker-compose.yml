@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - DB_PATH=/app/data/seedtrace.db
+      - STATIC_DIR=/app/dist
+    volumes:
+      - seedtrace-data:/app/data
+    init: true
+    stop_grace_period: 30s
+    restart: unless-stopped
+
+volumes:
+  seedtrace-data:
