@@ -182,3 +182,7 @@ db.exec(`
 `);
 
 export default db;
+
+export function closeDatabase() {
+  db.close();
+}
